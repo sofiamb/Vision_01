@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 753031770}
   - component: {fileID: 753031769}
   - component: {fileID: 753031768}
+  - component: {fileID: 753031771}
   m_Layer: 0
   m_Name: VisionTarget
   m_TagString: Untagged
@@ -587,6 +588,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753031771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753031767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52017206646b0a34f818f9b3634e02d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointPrefab: {fileID: 8007716916589104377, guid: 86c64bbc02a9a1f4a81e54f07bd51ae4,
+    type: 3}
+  mobs:
+  - {fileID: 0}
+  - {fileID: 0}
+  totalMobsPosible: 2
+  mobsInArea: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &954393707
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,103 +748,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 640156495}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1793968361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8007716916589104377, guid: 86c64bbc02a9a1f4a81e54f07bd51ae4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8007716915088966672}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1793968362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8007716916589104378, guid: 86c64bbc02a9a1f4a81e54f07bd51ae4,
     type: 3}
   m_PrefabInstance: {fileID: 8007716915088966672}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1793968364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793968361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8b301b22587174a9824312008e4e9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Seen: {r: 1, g: 0.97647065, b: 0.14509805, a: 1}
-  Missed: {r: 0, g: 0.4784314, b: 0.8000001, a: 1}
---- !u!114 &1793968365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793968361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1793968361}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1793968361}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1793968364}
-          m_MethodName: PointSeen
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!65 &1793968366
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793968361}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 1.0000001, z: 0.20000003}
-  m_Center: {x: 0, y: 0.00000047683716, z: 0}
 --- !u!1001 &8007716915088966672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -833,6 +765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007716916589104377, guid: 86c64bbc02a9a1f4a81e54f07bd51ae4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8007716916589104378, guid: 86c64bbc02a9a1f4a81e54f07bd51ae4,
         type: 3}

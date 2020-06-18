@@ -22,8 +22,15 @@ public class Points : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-    private void timeToBeSeen() { 
-    
+    public void timeToBeSeen() {
+        StartCoroutine(timeToSee());
+        
+    }
+    IEnumerator timeToSee() {
+        yield return new WaitForSeconds(2);
+        PointSeen();
+
+
     }
     public void PointSeen() { changeColor(Seen); }
     public void PointMissed() { changeColor(Missed);}
