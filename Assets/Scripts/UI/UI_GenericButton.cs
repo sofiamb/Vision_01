@@ -12,6 +12,7 @@ public class UI_GenericButton : MonoBehaviour
     {
         ExitButton,
         ResetButton,
+        QuitButton,
         None
     }
     public TypeButton typeButton;
@@ -50,9 +51,10 @@ public class UI_GenericButton : MonoBehaviour
        
         if (typeButton == TypeButton.ExitButton) { CloseApp(); }
         if (typeButton == TypeButton.ResetButton) { ResetScene(); }
-                
-        
-    
+        if (typeButton == TypeButton.QuitButton) { ExitApp(); }
+
+
+
     }
 
     private void CloseApp() { SceneManager.LoadScene("SCN_MainMenu"); }
