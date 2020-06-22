@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8007716916589104377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Seen: {r: 1, g: 0.97647065, b: 0.14509805, a: 1}
   Missed: {r: 0, g: 0.4784314, b: 0.8000001, a: 1}
+  SecondsToSeen: 2
+  targetController: {fileID: 0}
 --- !u!114 &1793968365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,12 +130,12 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8007716916589104377}
-          m_MethodName: 
+        - m_Target: {fileID: 1793968364}
+          m_MethodName: enterToPoint
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -143,23 +145,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8007716916589104377}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 1793968364}
-          m_MethodName: PointSeen
+          m_MethodName: exitToPoint
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
