@@ -59,8 +59,8 @@ public class UI_GenericButton : MonoBehaviour
 
     private void CloseApp() { SceneManager.LoadScene("SCN_MainMenu"); }
     public void ResetScene() {
-        Scene thisScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(1);
+        
+        SceneManager.LoadScene("VisionTest_01.1");
     }
     public void ExitApp() { Application.Quit(); }
 }
